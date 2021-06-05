@@ -27,6 +27,17 @@ void LCD_DATA(char y) {
 	LCD_command(0x06);	//Increment cursor
 }
 
+void LCD_display_string(char* mystring)
+{
+    int display_position = 0;
+   
+    while(*(mystring))
+    {
+        LCD_DATA( *(mystring++) );
+        display_position++;
+    }
+}
+
 void intial_LCD(void)
 {
 
