@@ -25,7 +25,7 @@ void turnoff(int distance )
 {
 	if(distance >= 100)
 	{
-	GPIO_PORTF_DATA_R =0x02;
+	GPIO_PORTF_DATA_R |=0x02;
 	
 	}else{
 	
