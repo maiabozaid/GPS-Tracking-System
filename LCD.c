@@ -11,19 +11,19 @@ void delay(int n)
 }
 
 void LCD_command(char x) {
-	GPIO_PORTC_DATA_R &= ~0x07;	 // Rs,Rw,E : bins 0E,1E,2E  all = zero
+	GPIO_PORTC_DATA_R &= ~0xE0;	 // Rs,Rw,E : bins c5 ,c6,c7(1110 0000 = 0XE0)  all = zero 
 	GPIO_PORTB_DATA_R = x;
-	GPIO_PORTC_DATA_R |= 0x04;  //enable: from 0 to 1
+	GPIO_PORTC_DATA_R |= 0x80;  //enable: from 0 to 1
 	delay(500);
-	GPIO_PORTC_DATA_R &= ~0x04;	//enable: from 1 to 0
+	GPIO_PORTC_DATA_R &= ~0x80;	//enable: from 1 to 0
 }
 
 void LCD_DATA(char y) {
-	GPIO_PORTC_DATA_R = 0X01;	 // Rs =1 , Rw &E = 0 
+	GPIO_PORTC_DATA_R = 0X20;	 // Rs =1 , Rw &E = 0 
 	GPIO_PORTB_DATA_R = y;
-	GPIO_PORTC_DATA_R |= 0x04; //ENABLING
+	GPIO_PORTC_DATA_R |= 0x80; //ENABLING
 	delay(500);
-	GPIO_PORTC_DATA_R &= ~0x04;
+	GPIO_PORTC_DATA_R &= ~0x80;
 	LCD_command(0x06);	//Increment cursor
 }
 
@@ -45,12 +45,12 @@ void intial_LCD(void)
 
 									 // PORT C
 	GPIO_PORTC_LOCK_R = 0x4C4F434B;    // rs : bin 0 ,rw: bin 1 ,enable : bin 2  output  //101
-	GPIO_PORTC_CR_R |= 0x07;	//0000 0111
-	GPIO_PORTC_AMSEL_R &= ~0x07;
-	GPIO_PORTC_AFSEL_R &= ~0x07;
-	GPIO_PORTC_PCTL_R &= 0XFFFFF000;
-	GPIO_PORTC_DEN_R |= 0x07;
-	GPIO_PORTC_DIR_R |= 0x07;
+	GPIO_PORTC_CR_R |= 0xE0;	// Although they are already = 1 but just to make the code general
+	GPIO_PORTC_AMSEL_R &= ~0xE0;
+	GPIO_PORTC_AFSEL_R &= ~0xE0;
+	GPIO_PORTC_PCTL_R &= 0X000FFFFF;
+	GPIO_PORTC_DEN_R |= 0xE0;
+	GPIO_PORTC_DIR_R |= 0xE0;
 
 	LCD_command(0x30); //wakeup lcd
 	delay(500);
