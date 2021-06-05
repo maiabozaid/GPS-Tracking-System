@@ -67,6 +67,8 @@ void intial_LCD(void)
 	delay(100);
 	LCD_command(0x01); //clear screen
 	delay(100);
+	LCD_command(0x38); //2 lines 8bits 
+        delay(100);
 	LCD_command(0x80); //Force cursor to beginning of 1st line
 	delay(100);
 	LCD_command(0x0f); //Display on, cursor blinking
