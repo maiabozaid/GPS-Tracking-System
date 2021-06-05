@@ -14,7 +14,7 @@ void LCD_command(char x) {
 	GPIO_PORTC_DATA_R &= ~0xE0;	 // Rs,Rw,E : bins c5 ,c6,c7(1110 0000 = 0XE0)  all = zero 
 	GPIO_PORTB_DATA_R = x;
 	GPIO_PORTC_DATA_R |= 0x80;  //enable: from 0 to 1
-	delay(500);
+	delay(200);
 	GPIO_PORTC_DATA_R &= ~0x80;	//enable: from 1 to 0
 }
 
@@ -22,7 +22,7 @@ void LCD_DATA(char y) {
 	GPIO_PORTC_DATA_R = 0X20;	 // Rs =1 , Rw &E = 0 
 	GPIO_PORTB_DATA_R = y;
 	GPIO_PORTC_DATA_R |= 0x80; //ENABLING
-	delay(500);
+	delay(50);
 	GPIO_PORTC_DATA_R &= ~0x80;
 	LCD_command(0x06);	//Increment cursor
 }
@@ -53,11 +53,11 @@ void intial_LCD(void)
 	GPIO_PORTC_DIR_R |= 0xE0;
 
 	LCD_command(0x30); //wakeup lcd
-	delay(500);
+	delay(100);
 	LCD_command(0x01); //clear screen
-	delay(500);
+	delay(100);
 	LCD_command(0x80); //Force cursor to beginning of 1st line
-	delay(500);
+	delay(100);
 	LCD_command(0x0f); //Display on, cursor blinking
-	delay(500);
+	delay(100);
 }
