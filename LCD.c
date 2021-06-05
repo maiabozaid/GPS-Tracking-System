@@ -35,6 +35,19 @@ void LCD_display_string(char* mystring)
     {
         LCD_DATA( *(mystring++) );
         display_position++;
+	if ( !(display_position %32) )   // 2 lines are full
+                {
+                    display_position = 0;
+                    delay(300);
+                    LCD_command(0x01);  //clear screen
+                    LCD_command(0x80);  //move cursor to beginning of first line
+                }
+                else if (!(display_position % 16))      // first line is full
+                {
+
+                        LCD_command(0xC0);  //move cursor to beginning of second line
+
+    }
     }
 }
 
