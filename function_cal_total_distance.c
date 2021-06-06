@@ -28,8 +28,7 @@ while(1){
 				distance = distance * 60 * 1.1515;
 				distance = distance * 1.609344;
 				distance = distance * 1.609344 * 1000;
-				total_distance += distance;
-				return total_distance; //it will return total distance (meter)
+				return distance; //it will return total distance (meter)
 				
 			
 		}
