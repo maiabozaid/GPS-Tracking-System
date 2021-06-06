@@ -7,8 +7,3 @@ uint8_t UART0_InChar()
  return ((uint8_t)(UART0_DR_R & 0xff));     // Read UART0 data ,cast to integer
 }
 
-
-int main()
-{
-
-}
