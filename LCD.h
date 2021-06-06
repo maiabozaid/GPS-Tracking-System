@@ -4,4 +4,5 @@
 2)void LCD_command(char x);
 3)void LCD_DATA(char y);
 4)void LCD_display_string(char* mystring);
-5)void intial_LCD(void);
+5)void LCD_number(int x) ;
+6)void intial_LCD(void);
