@@ -1,0 +1,21 @@
+This file describes the functions used with LCD(liquid crystal display) 2*16.
+
+The functions used with LCD:
+
+1) void delay(int n);
+        this is a delay function to enable the LCD keep up the microcontroller as the microcontroller is much more fast than the LCD
+        
+2)void LCD_command(char x);
+        This function is used to send a command to LCD, the commends are like: wake up screen(0x30), Clear display screen(0x01), Return cursor home(0x02),
+        shift cursor to right(0x06), Display on-cursor blinking(0x0F), Force cursor to beginning of 1st line(0x80), Force cursor to beginning of 
+        2nd line2(0xC0), 2 lines and 5x7 character (8-bit data, D0 to D7)(0X38), 2 lines and 5x7 character (4-bit data, D4 to D7)(0X28) 
+ 
+3)void LCD_DATA(char y);
+        This function is used to display one character, or to give the value of the commend as it depends on the value of Rs (= 0: commend, = 1:Data)
+
+4)void LCD_display_string(char* mystring);
+        This function is used to display a string of any numbers of characters on LCD.
+
+5)void intial_LCD(void);
+        This function is used to initialize the LCD before using it, using ports b and C, using all bins of port b and connecting them to bins 
+        from D0 to D7 of the LCD, and connecting bins (C5,C6,C7) to (Rs,Rw,E) of LCD bins respectivelly.  
