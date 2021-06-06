@@ -1,0 +1,51 @@
+/****************Description of the function which calculates total distance*************************/ 
+	
+This function calculates the distance between two points which takes
+ 
+the latitude and longitude of those points.It is used to calculate   
+  
+the distance between two locations using GeoDataSource(TM) products.
+
+we will pass latitude_1, longitude_1 = Latitude and Longitude of point 1 (in decimal degrees)
+
+and latitude_2, longitude_2 = Latitude and Longitude of point 2 (in decimal degrees).
+
+the result will be in miles default and i convert it to meter by multiplying (1.609344*1000)
+
+so the return value of function will be in meter
+
+there are two functions one of them which converts from degree to radian (convert_deg2rad)
+
+it will take degree and convert to radian 
+
+and other function which converts from radian to degree (convert_rad2deg)
+
+it will take radian and convert to degree.
+
+in the main function:-
+
+i need to do while loop to take every tow points to calculate the distance between them 
+
+and we need to store the point2 in the point1 to make the function update the points 
+
+the while loop will break if total distance greater than 100 or if i press the button 
+
+the code of pressed button will invoke the function of it in the main function.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
