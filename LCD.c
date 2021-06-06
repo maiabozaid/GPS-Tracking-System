@@ -87,3 +87,10 @@ void intial_LCD(void)
 	LCD_command(0x0f); //Display on, cursor blinking
 	delay(100);
 }
+//FOR TESTING:
+int main() {
+    intial_LCD();
+    LCD_display_string("Hello from the  other side");
+
+
+}
