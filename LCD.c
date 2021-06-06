@@ -14,7 +14,7 @@ void LCD_command(char x) {
 	GPIO_PORTC_DATA_R &= ~0xE0;	 // Rs,Rw,E : bins c5 ,c6,c7(1110 0000 = 0XE0)  all = zero 
 	GPIO_PORTB_DATA_R = x;
 	GPIO_PORTC_DATA_R |= 0x80;  //enable: from 0 to 1
-	delay(200);
+	delay(100);
 	GPIO_PORTC_DATA_R &= ~0x80;	//enable: from 1 to 0
 }
 
