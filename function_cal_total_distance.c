@@ -33,7 +33,7 @@ int main()
 			
 		}
 	}
-	float  convert_deg2rad(float degree)   //function converts from degree to radian;;;; 
+	float  convert_deg2rad(float degree)   //function converts from degree to radian
 	{
 		return (degree * pi / 180);
 	}
