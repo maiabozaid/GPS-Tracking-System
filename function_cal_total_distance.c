@@ -6,13 +6,18 @@ float convert_deg2rad(float degree);
 float convert_rad2deg(float radian);
 float cal_distance(float latitude_1, float longitude_1, float latitude_2, float longitude_2);
 int main()
-{
-	cal_distance(12.32, 20.32, 13.15, 21.23);//initional values
-
-
+{	float total_distance;
+ 	float distance ;
+	while(1){
+	distance = cal_distance(12.32, 20.32, 13.15, 21.23);//initional values (these values will take them from GPS but i initionalize them to test the code
+	total_distance+=distance ;
+	if(total_distance >100)
+		break;
+	}
+	
 }
-float total_distance = 0;
-while(1){
+
+
 	float cal_distance(float latitude_1, float longitude_1, float latitude_2, float longitude_2) //function has 4 float inputs represent tow points in the coordinates and char select to select  units which show data
 	{
 		float theta, distance;
