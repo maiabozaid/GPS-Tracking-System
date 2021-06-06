@@ -1,12 +1,7 @@
 #include "function_cal_total_distance.h"
-#include "stdint.h"
-#include <math.h>
 #define pi  3.14159265358979323846	
-float convert_deg2rad(float degree);
-float convert_rad2deg(float radian);
-float cal_distance(float latitude_1, float longitude_1, float latitude_2, float longitude_2);
 int main()
-{	float total_distance;
+{	float total_distance = 0.0;
  	float distance ;
 	while(1){
 	distance = cal_distance(12.32, 20.32, 13.15, 21.23);//initional values (these values will take them from GPS but i initionalize them to test the code
@@ -18,7 +13,7 @@ int main()
 }
 
 
-	float cal_distance(float latitude_1, float longitude_1, float latitude_2, float longitude_2) //function has 4 float inputs represent tow points in the coordinates and char select to select  units which show data
+	float cal_distance(float latitude_1, float longitude_1, float latitude_2, float longitude_2) //function has 4 float inputs represent tow points in the coordinates 
 	{
 		float theta, distance;
 		if ((latitude_1 == latitude_2) && (longitude_1 == longitude_2))
@@ -33,7 +28,7 @@ int main()
 				distance = distance * 60 * 1.1515;
 				distance = distance * 1.609344;
 				distance = distance * 1.609344 * 1000;
-				return distance; //it will return total distance (meter)
+				return distance; //it will return distance (meter)
 				
 			
 		}
