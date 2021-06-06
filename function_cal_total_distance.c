@@ -8,7 +8,7 @@ int main()
 	total_distance+=distance ;
 	if(total_distance >100)
 		break;
-	}
+	}// you can check the values from this website (please take care of choosing KM unit ) --> https://www.nhc.noaa.gov/gccalc.shtml
 	
 }
 
