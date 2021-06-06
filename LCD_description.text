@@ -16,6 +16,9 @@ The functions used with LCD:
 4)void LCD_display_string(char* mystring);
         This function is used to display a string of any numbers of characters on LCD.
 
-5)void intial_LCD(void);
+5)void LCD_number(int x) ;
+         This function is used to recieve a datatype number. 
+
+6)void intial_LCD(void);
         This function is used to initialize the LCD before using it, using ports b and C, using all bins of port b and connecting them to bins 
         from D0 to D7 of the LCD, and connecting bins (C5,C6,C7) to (Rs,Rw,E) of LCD bins respectivelly.  
