@@ -6,7 +6,7 @@
 
 
 
-/*****************************************/
+/******************************************/
 
 float convert_deg2rad(float degree);
 float convert_rad2deg(float radian);
