@@ -27,7 +27,7 @@ int main()
 				distance = convert_rad2deg(distance);
 				distance = distance * 60 * 1.1515;
 				distance = distance * 1.609344;
-				distance = distance * 1.609344 * 1000;
+				distance = distance * 1000;
 				return distance; //it will return distance (meter)
 				
 			
