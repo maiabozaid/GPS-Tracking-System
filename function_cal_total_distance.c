@@ -29,8 +29,7 @@ while(1){
 				distance = distance * 1.609344 * 1000;
 				total_distance += distance;
 				return total_distance; //it will return total distance (meter)
-				latitude_1 = latitude_2;
-				longitude_1 = longitude_2;
+				
 			
 		}
 	}
