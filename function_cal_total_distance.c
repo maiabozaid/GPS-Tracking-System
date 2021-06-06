@@ -17,7 +17,7 @@ while(1){
 	{
 		float theta, distance;
 		if ((latitude_1 == latitude_2) && (longitude_1 == longitude_2))
-			return 0; //this means that you didn't move so the total distance equal zero 
+			return 0; //this means that you don't move so the total distance equal zero 
 		else
 		{
 			
