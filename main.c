@@ -74,7 +74,9 @@ void main(){
       }while( sum < 100  );
       RGBLED_Init ();
       void led_on();
-     
+     char res[20];
+     ftoa(sum, res, 4);
+      LCD_display_string(res);
       LCD_display_string("Finished") ;
       
 
