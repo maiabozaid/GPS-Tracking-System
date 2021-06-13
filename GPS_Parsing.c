@@ -1,11 +1,4 @@
-#include "D:/2nd computer/2nd term/Embedded Systems/Project/tm4c123gh6pm.h"
-#include "stdint.h"
-#include "string.h"
-#include <stdlib.h>
-#define messageMaxSize   60
-#define lat_long_length   15
-#define latComma     3
-#define longComma     5
+#include "GPS_Parsing.h"
 void UART5_INIT(){
 SYSCTL_RCGCUART_R |= 0x20 ;       //0000 0000   PORT E
 SYSCTL_RCGCGPIO_R |= 0x10 ;
