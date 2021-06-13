@@ -1,5 +1,6 @@
 #include "tm4c123gh6pm.h" 
 #include "LCD.c"
+#include "led_on_off.c";
 
 
 
@@ -66,7 +67,8 @@ void main(){
       
 
       }while( sum < 100   );
-      
+      RGBLED_Init ();
+      void led_on();
       
       // turn led on
       LCD_display_string("Finished") ;
