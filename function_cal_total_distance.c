@@ -1,5 +1,4 @@
-#include "function_cal_total_distance.h"
-#define pi  3.14159265358979323846	
+#include "function_cal_total_distance.h"	
 int main()
 {	float total_distance = 0.0;
  	float distance ;
