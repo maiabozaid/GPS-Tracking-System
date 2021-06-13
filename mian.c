@@ -1,5 +1,5 @@
 #include "tm4c123gh6pm.h" 
-#include "LCD.c"
+#include "LCD.h"
 #include "led_on_off.c";
 
 
