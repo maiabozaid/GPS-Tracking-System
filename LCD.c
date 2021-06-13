@@ -97,30 +97,30 @@ void intial_LCD(void)
 	delay(100);
 }
 //FOR TESTING:
-int main() {
-    intial_LCD();
-    LCD_display_string("Welcome to our  GPS Project"); // string displaying
-    delay(500);
-    LCD_command(0x01); //clear screen
+// int main() {
+//     intial_LCD();
+//     LCD_display_string("Welcome to our  GPS Project"); // string displaying
+//     delay(500);
+//     LCD_command(0x01); //clear screen
 	
-    LCD_display_string("Number: "); 
-    LCD_number(1) ; // Number displaying
-    delay(500);
-    LCD_command(0x01); //clear screen
+//     LCD_display_string("Number: "); 
+//     LCD_number(1) ; // Number displaying
+//     delay(500);
+//     LCD_command(0x01); //clear screen
 	
-    LCD_display_string("Char: ");
-    LCD_DATA('A') ; // Char displaying
-    delay(500);
-    LCD_command(0x01); //clear screen
+//     LCD_display_string("Char: ");
+//     LCD_DATA('A') ; // Char displaying
+//     delay(500);
+//     LCD_command(0x01); //clear screen
 	
-    LCD_display_string("Hexa values:"); // sending hexa decimal values 
-    LCD_DATA(0x32) ;
-    LCD_DATA(0x26) ;
-    LCD_DATA(0x4D) ;
-    delay(500);
-    LCD_command(0x01); //clear screen
+//     LCD_display_string("Hexa values:"); // sending hexa decimal values 
+//     LCD_DATA(0x32) ;
+//     LCD_DATA(0x26) ;
+//     LCD_DATA(0x4D) ;
+//     delay(500);
+//     LCD_command(0x01); //clear screen
 	
-    LCD_display_string("Thanks!");
+//     LCD_display_string("Thanks!");
 
 
-}
+// }
