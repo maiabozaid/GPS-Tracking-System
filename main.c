@@ -67,8 +67,10 @@ void main(){
 
      
           //LCD print total ( print float )
-      
-
+      memset(message,0,messageMaxSize);
+      memset(latitudeChar,0,lat_long_length);
+      memset(longitudeChar,0,lat_long_length);
+       
       }while( sum < 100  );
       RGBLED_Init ();
       void led_on();
