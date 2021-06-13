@@ -65,3 +65,36 @@ return 1;
 
 return 0;
 }
+///////////////////////////
+
+uint8_t GPS_Fix(char* mess){
+uint8_t i=0;
+uint8_t j=0;
+for(i=0;i<messageMaxSize;i++){
+if(mess[i]==',')
+  j++;
+if(j==2)
+  break;	
+}
+return mess[i+1];
+}
+
+
+void get_lat_long_char(char* mess,char* latORlongChar,uint8_t commaNum){
+uint8_t i=0;
+uint8_t j=0;
+for(i=0;i<messageMaxSize;i++){
+if(mess[i]==',')
+  j++;
+if(j==commaNum){
+  i++;  
+  break;}	
+}
+j=0;
+for(i=i;i<messageMaxSize;i++){
+if(mess[i]==',')
+  break;	
+latORlongChar[j]=mess[i];
+j++;
+}
+}
