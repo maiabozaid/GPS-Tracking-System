@@ -18,6 +18,8 @@ float lat_1 , long_1 , lat_2 , long_2 ;
 void main(){
 
   UART0_INIT();
+  intial_LCD();  
+
   
  
   do{
@@ -51,7 +53,7 @@ void main(){
           lat_2 =DMM_to_DD(latitude);
           long_2 =DMM_to_DD(longitude);
           
-          diff = cal_distance( lat_1, long_1 , lat_2 , long_2 );
+          diff = cal_distance( lat_1, long_1 , lat_2 , long_2 ); 
           sum = sum + diff ;
           
           lat_1 = lat_2 ;
@@ -69,8 +71,7 @@ void main(){
       }while( sum < 100   );
       RGBLED_Init ();
       void led_on();
-      
-      // turn led on
+     
       LCD_display_string("Finished") ;
       
 
