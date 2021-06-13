@@ -1,7 +1,8 @@
 #include "tm4c123gh6pm.h" 
 #include "LCD.h"
-#include "led_on_off.h";
+#include "led_on_off.h"
 #include "final_cal_total_distance.h"
+#include "GPS_Parsing.h"
 
 
 
@@ -17,7 +18,7 @@ float lat_1 , long_1 , lat_2 , long_2 ;
 
 void main(){
 
-  UART0_INIT();
+  UART5_INIT();
   intial_LCD();  
 
   
@@ -65,10 +66,10 @@ void main(){
           
 
      
-     
+          //LCD print total ( print float )
       
 
-      }while( sum < 100   );
+      }while( sum < 100  );
       RGBLED_Init ();
       void led_on();
      
