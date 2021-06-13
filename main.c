@@ -65,7 +65,7 @@ void main(){
           
 
      
-          //LCD print total ( print float )
+     
       
 
       }while( sum < 100   );
