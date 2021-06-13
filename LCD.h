@@ -1,8 +1,8 @@
 #include "tm4c123gh6pm.h" 
 
-1)void delay(int n);
-2)void LCD_command(char x);
-3)void LCD_DATA(char y);
-4)void LCD_display_string(char* mystring);
-5)void LCD_number(int x) ;
-6)void intial_LCD(void);
+void delay(int n);
+void LCD_command(char x);
+void LCD_DATA(char y);
+void LCD_display_string(char* mystring);
+void LCD_number(int x) ;
+void intial_LCD(void);
