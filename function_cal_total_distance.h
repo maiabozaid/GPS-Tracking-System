@@ -2,7 +2,7 @@
 #include <math.h>
 #define  pi 3.14159265358979323846        
 
-//constant pi which equal 22/7
+//constant pi which is equal 22/7
 
 
 
