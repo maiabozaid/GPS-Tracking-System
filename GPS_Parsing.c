@@ -25,3 +25,42 @@ void UART5_write(char data){
   while((UART5_FR_R & 0x0020)!=0){};
     UART5_DR_R = data;
 }
+
+///////////
+char UART5_read(){
+   while((UART5_FR_R & 0x0010) !=0);  
+	 return  (char)(UART5_DR_R & 0xFF);    
+}
+
+
+void get_message(char* mess){
+char m;
+uint8_t i=1;
+while(1){
+m=UART5_read();
+if(m=='$')
+	break;
+}
+mess[0]=m;
+
+for(i=1;i<messageMaxSize;i++)
+{
+m=UART5_read();
+if(m=='E' ||m=='W')
+  break;
+mess[i]=m;
+}
+
+}		
+
+uint8_t is_RMC(char* mess){
+uint8_t i=0;
+char header[6];
+for(i=0;i<6;i++){
+header[i]=mess[i];
+}
+if(strcmp(header, "$GPRMC")==0)
+return 1;
+
+return 0;
+}
