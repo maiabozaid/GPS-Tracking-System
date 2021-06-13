@@ -98,3 +98,11 @@ latORlongChar[j]=mess[i];
 j++;
 }
 }
+//////////////////////////
+
+float DMM_to_DD(float DMM){
+float DD;
+DD=(int)(DMM/100);
+DD=DD+((DMM - DD*100)/60);
+return DD;
+}
