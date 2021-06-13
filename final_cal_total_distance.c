@@ -1,3 +1,4 @@
+#include "final_cal_total_distance.h"
 float cal_distance(float latitude_1, float longitude_1, float latitude_2, float longitude_2) //function has 4 float inputs represent tow points in the coordinates 
 	{
 		float theta, distance;
