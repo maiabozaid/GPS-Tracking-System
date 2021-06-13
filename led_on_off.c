@@ -1,7 +1,7 @@
 #include"led_on_off.h"
 
 
-void SystemInit(){}
+
 
 void RGBLED_Init ()
 {
